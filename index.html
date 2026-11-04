@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="build-id" content="1793783440">
+<meta name="build-id" content="1793785808">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Joshua Anilao - Senior Game Developer portfolio: game design, product development and rapid prototyping.">
 <script>
-(function(){if(!/github\.io$/.test(location.hostname))return;var me="1793783440";
+(function(){if(!/github\.io$/.test(location.hostname))return;var me="1793785808";
 fetch(location.pathname+"?check="+Date.now(),{cache:"no-store",headers:{Range:"bytes=0-1023"}})
 .then(function(r){return r.text()}).then(function(t){var m=t.match(/name="build-id" content="(\d+)"/);
 if(!m||m[1]===me)return;var u=new URL(location.href);if(u.searchParams.get("v")===m[1])return;
@@ -81,7 +81,7 @@ nav.links a .dot{width:8px;height:8px;border-radius:50%;background:currentColor;
 main{padding-block:18px 48px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px;max-width:1120px;width:100%;margin-inline:auto;min-width:0}
 .ticker{background:var(--panel);border-radius:999px;padding:9px 18px;font-size:14px;color:var(--muted);display:flex;gap:12px;align-items:center;overflow:hidden;white-space:nowrap}
 .ticker b{color:var(--orange);flex:none;display:flex;align-items:center;gap:6px}
-.ticker .win{overflow:hidden;flex:1;min-width:0;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.ticker .win{overflow:hidden;flex:1;min-width:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
 .ticker .run{display:inline-flex;gap:36px;padding-right:36px;animation:marq 38s linear infinite}
 .ticker .run span::before{content:"●";color:var(--b-yellow);margin-right:10px}
 .ticker:hover .run{animation-play-state:paused}
@@ -97,12 +97,12 @@ section{scroll-margin-top:80px}
   radial-gradient(circle at 85% 15%,rgba(255,184,31,.45),transparent 38%),
   radial-gradient(circle at 0% 100%,rgba(139,92,246,.55),transparent 45%),
   linear-gradient(120deg,#ff7a3d 0%,#ff5c2b 45%,#d93a1c 100%)}
-.fx{position:absolute;inset:-12px;pointer-events:none;overflow:hidden;filter:blur(2.5px)}
-.fx-sharp{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.fx{position:absolute;top:-12px;right:-12px;bottom:-12px;left:-12px;pointer-events:none;overflow:hidden;filter:blur(2.5px)}
+.fx-sharp{position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;overflow:hidden;z-index:1}
 .beam{position:absolute;top:-40px;width:140px;height:420px;background:linear-gradient(180deg,rgba(255,255,255,.32),rgba(255,255,255,0) 80%);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%);transform-origin:50% 0;mix-blend-mode:soft-light;animation:sweep 7s ease-in-out infinite alternate}
 .beam.b1{left:52%;transform:rotate(24deg)}.beam.b2{left:66%;transform:rotate(-18deg);animation-delay:-3s}.beam.b3{left:8%;transform:rotate(-30deg);opacity:.6;animation-delay:-5s}
 @keyframes sweep{to{rotate:10deg}}
-.grid-floor{position:absolute;left:-10%;right:-10%;bottom:-120px;height:220px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 2px,transparent 2px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.14) 0 2px,transparent 2px 40px);transform:perspective(300px) rotateX(55deg);mask-image:linear-gradient(0deg,#000,transparent)}
+.grid-floor{position:absolute;left:-10%;right:-10%;bottom:-120px;height:220px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 2px,transparent 2px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.14) 0 2px,transparent 2px 40px);transform:perspective(300px) rotateX(55deg);-webkit-mask-image:linear-gradient(0deg,#000,transparent);mask-image:linear-gradient(0deg,#000,transparent)}
 .slotbg{position:absolute;top:-30px;bottom:-30px;left:18%;right:22%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;filter:blur(3px);opacity:.5;transform:rotate(-3deg)}
 .slotbg .col{overflow:hidden;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.55) 50%,rgba(255,255,255,.15));box-shadow:inset 0 0 0 3px rgba(255,255,255,.4)}
 .slotbg .col{position:relative}
@@ -126,7 +126,7 @@ h1.gold{font-family:"Montserrat","Nunito",system-ui,sans-serif;font-weight:900;t
 h1.gold .ch{display:inline-block;position:relative;color:#5c0d06;-webkit-text-stroke:7px #5c0d06;paint-order:stroke fill;text-shadow:0 2px 0 #5c0d06,0 4px 0 #430803,0 6px 10px rgba(60,0,0,.45),0 0 16px rgba(255,140,30,.9),0 0 30px rgba(255,190,60,.55);animation:wave 2.6s ease-in-out infinite;animation-delay:calc(var(--i) * .09s)}
 h1.gold .sp{display:inline-block;width:.28em}
 @keyframes wave{0%,60%,100%{transform:translateY(0)}20%{transform:translateY(-4px)}40%{transform:translateY(1px)}}
-h1.gold .ch::after{content:attr(data-c);position:absolute;inset:0;-webkit-text-stroke:0;text-shadow:none;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.95) 50%,transparent 62%) 100% 0/300% 100% no-repeat,linear-gradient(180deg,#ffffff 0%,#fffbe0 22%,#ffeb7a 45%,#ffc928 62%,#ff9a12 82%,#ffb63a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shinewave 2.6s ease-in-out infinite;animation-delay:calc(var(--i) * .09s)}
+h1.gold .ch::after{content:attr(data-c);position:absolute;top:0;right:0;bottom:0;left:0;-webkit-text-stroke:0;text-shadow:none;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.95) 50%,transparent 62%) 100% 0/300% 100% no-repeat,linear-gradient(180deg,#ffffff 0%,#fffbe0 22%,#ffeb7a 45%,#ffc928 62%,#ff9a12 82%,#ffb63a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shinewave 2.6s ease-in-out infinite;animation-delay:calc(var(--i) * .09s)}
 @keyframes shinewave{0%,6%{background-position:100% 0,0 0}34%,100%{background-position:0% 0,0 0}}
 @keyframes namepulse{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
 
@@ -134,7 +134,7 @@ h1.gold .ch::after{content:attr(data-c);position:absolute;inset:0;-webkit-text-s
 .about-lead{font-size:17px;max-width:72ch;margin-bottom:18px}
 .sub-h{font-size:19px;margin-bottom:4px}
 .winpop{position:fixed;z-index:10000;pointer-events:none;white-space:nowrap;font:italic 900 30px/1 "Montserrat","Nunito",sans-serif;text-transform:uppercase;letter-spacing:.01em;color:#7a1206;-webkit-text-stroke:6px #7a1206;paint-order:stroke fill;text-shadow:0 3px 0 #4d0a03,0 6px 12px rgba(60,0,0,.35);opacity:0;will-change:transform,opacity;transform:translate(-50%,-50%) rotate(var(--r));animation:winword 1.35s linear forwards}
-.winpop::after{content:attr(data-t);position:absolute;inset:0;-webkit-text-stroke:0;text-shadow:none;background:linear-gradient(180deg,#fff 0%,#fffbe0 22%,#ffe066 48%,#ffb81f 72%,#ff9a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.winpop::after{content:attr(data-t);position:absolute;top:0;right:0;bottom:0;left:0;-webkit-text-stroke:0;text-shadow:none;background:linear-gradient(180deg,#fff 0%,#fffbe0 22%,#ffe066 48%,#ffb81f 72%,#ff9a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 @keyframes winword{
 0%{transform:translate(-50%,-50%) translateY(0) rotate(var(--r)) scale(.35);opacity:0;animation-timing-function:cubic-bezier(.2,.8,.3,1)}
 14%{transform:translate(-50%,-50%) translateY(-14px) rotate(var(--r)) scale(1.08);opacity:1;animation-timing-function:ease-in-out}
@@ -142,7 +142,8 @@ h1.gold .ch::after{content:attr(data-c);position:absolute;inset:0;-webkit-text-s
 38%{transform:translate(-50%,-50%) translateY(-30px) rotate(var(--r)) scale(1);opacity:1;animation-timing-function:linear}
 72%{transform:translate(-50%,-50%) translateY(-54px) rotate(var(--r)) scale(1);opacity:1;animation-timing-function:ease-in}
 100%{transform:translate(-50%,-50%) translateY(-76px) rotate(var(--r)) scale(1);opacity:0}}
-.tapfx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999}
+@supports not (aspect-ratio:1/1){.thumb{height:0!important;padding:0 0 62.5%!important}.watch{height:340px}}
+.tapfx{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999}
 .hero-right{position:relative;z-index:2;display:flex;flex-direction:column;gap:7px;padding-top:4px;justify-content:center;height:100%}
 .hcard{display:flex;gap:11px;align-items:center;background:linear-gradient(135deg,rgba(70,12,0,.42),rgba(70,12,0,.26));-webkit-backdrop-filter:blur(10px) saturate(1.2);backdrop-filter:blur(10px) saturate(1.2);color:#fff;border:1.5px solid rgba(255,255,255,.45);border-radius:14px;padding:7px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 6px 16px rgba(80,15,0,.22)}
 .hcard .hc-ico{width:34px;height:34px;flex:none;border-radius:10px;display:grid;place-items:center;box-shadow:inset 0 -4px 0 rgba(0,0,0,.15)}
@@ -175,7 +176,7 @@ h1.gold .ch::after{content:attr(data-c);position:absolute;inset:0;-webkit-text-s
 .rt-ico svg{width:14px;height:14px}
 .rt-txt{font:italic 900 14px/1 "Montserrat","Nunito",sans-serif;text-transform:uppercase;letter-spacing:.02em}
 .rt-txt em{font-style:italic;background:linear-gradient(180deg,#fffbe0 0%,#ffe066 45%,#ffb81f 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-.live{display:inline-block;width:max-content;max-width:100%;background:rgba(40,8,0,.4);backdrop-filter:blur(4px);border-radius:999px;padding:7px 15px 7px 11px;font-weight:800;font-size:14.3px;line-height:1.3;letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.live{display:inline-block;width:max-content;max-width:100%;background:rgba(40,8,0,.4);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border-radius:999px;padding:7px 15px 7px 11px;font-weight:800;font-size:14.3px;line-height:1.3;letter-spacing:.06em;text-transform:uppercase;text-align:center}
 .band{position:relative;align-self:stretch;margin-inline:-14px;padding:9px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,236,220,.42) 8%,rgba(255,236,220,.42) 85%,rgba(255,255,255,0));border-top:1px solid rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.35);font:900 14px/1.2 "Montserrat","Nunito",sans-serif;text-transform:uppercase;letter-spacing:0;color:#fff;-webkit-text-stroke:2.4px #b3140f;paint-order:stroke fill;text-shadow:0 2px 0 rgba(120,15,0,.5)}
 .band i{font-style:normal;color:#ffe066}
 .stage .role{font:italic 800 15.5px/1.35 var(--body)!important;opacity:1!important;text-shadow:0 2px 4px rgba(120,25,0,.35)}
@@ -234,15 +235,15 @@ h1.gold .ch::after{content:attr(data-c);position:absolute;inset:0;-webkit-text-s
 .gcard .thumb::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--orange)}
 .cycling .gcard[aria-pressed="true"] .thumb::after{animation:prog 5s linear forwards}
 @keyframes prog{to{width:100%}}
-.thumb{aspect-ratio:16/10;max-width:100%;position:relative;display:grid;place-items:center;padding:12px;color:#fff;text-align:center}
+.thumb{aspect-ratio:16/10;width:100%;max-width:100%;position:relative;display:grid;place-items:center;padding:12px;color:#fff;text-align:center}
 .thumb .t{font:800 clamp(20px,2.2vw,26px)/1 var(--display);text-shadow:0 3px 0 rgba(0,0,0,.22);text-transform:uppercase}
 .thumb .badge{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);font-size:11px;font-weight:800;letter-spacing:.06em;padding:3px 8px;border-radius:6px}
 .thumb .hot{position:absolute;top:8px;left:8px;background:var(--b-red);font-size:11px;font-weight:800;padding:3px 8px;border-radius:6px}
 .gcard .name{padding:10px 12px;font-weight:800;font-size:15px;display:flex;justify-content:space-between;gap:6px;align-items:center}
 .gcard .name small{font-weight:700;color:var(--muted);font-size:12px}
-.watch.has-img::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.6))}
+.watch.has-img::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.6))}
 .watch>*{position:relative;z-index:2}
-.playov{position:absolute;inset:0;display:grid;place-items:center;background:rgba(20,10,30,.38);opacity:0;transition:opacity .18s;z-index:2}
+.playov{position:absolute;top:0;right:0;bottom:0;left:0;display:grid;place-items:center;background:rgba(20,10,30,.38);opacity:0;transition:opacity .18s;z-index:2}
 .playov span{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#ff8f6b,#f2643a);color:#fff;font:800 18px/1 var(--body);letter-spacing:.04em;padding:11px 30px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:scale(.85);transition:transform .18s}
 .playov svg{width:20px;height:20px}
 @media (hover:hover){.gcard:hover .playov{opacity:1}.gcard:hover .playov span{transform:scale(1)}}
@@ -269,7 +270,7 @@ h1.gold .ch::after{content:attr(data-c);position:absolute;inset:0;-webkit-text-s
 .aside{display:flex;flex-direction:column;gap:14px}
 .watch{border-radius:var(--r-md);aspect-ratio:9/12;max-width:100%;max-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#fff;text-decoration:none;position:relative;overflow:hidden}
 .watch.playing{background:#000;padding:0;display:block}
-.watch.playing iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.watch.playing iframe{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;border:0;display:block}
 .watch .play{width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 0 rgba(0,0,0,.2);transition:transform .15s}
 .watch:hover .play{transform:scale(1.08)}
 .watch .play::after{content:"";border-left:22px solid var(--orange);border-top:14px solid transparent;border-bottom:14px solid transparent;margin-left:6px}
@@ -368,8 +369,8 @@ footer{font-size:13px;color:var(--muted);text-align:center;padding-top:6px}
 @media (max-width:820px){
   .shell{grid-template-columns:minmax(0,1fr)}
   .rail{display:none}
-  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--panel)}
-  .topbar{display:flex;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--panel);border-bottom:1px solid var(--line);padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));align-items:center;gap:12px;overflow-x:auto}
+  body::before{content:"";position:fixed;top:0;right:0;bottom:auto;left:0;height:env(safe-area-inset-top,0px);z-index:10;background:var(--panel)}
+  .topbar{display:flex;position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--panel);border-bottom:1px solid var(--line);padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));align-items:center;gap:12px;overflow-x:auto}
   .topbar a{text-decoration:none;font-weight:800;font-size:14px;color:var(--muted);white-space:nowrap}
   .topbar .mark span{width:28px;height:28px;font-size:17px;margin-left:-6px}
   main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 40px;gap:16px}
@@ -415,7 +416,7 @@ footer{font-size:13px;color:var(--muted);text-align:center;padding-top:6px}
 
 <div class="topbar" aria-label="Sections">
   <div class="mark" aria-hidden="true"><span>J</span><span>O</span><span>S</span><span>H</span></div>
-  <a href="#games">Games</a><a href="#workflow">Workflow</a><a href="#more">More work</a><a href="#experience">About me</a><a href="#contact">Contact</a><a class="tb-dl" href="Joshua_Anilao_Resume.pdf?v=1793783440" download="Joshua_Anilao_Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Resume</a>
+  <a href="#games">Games</a><a href="#workflow">Workflow</a><a href="#more">More work</a><a href="#experience">About me</a><a href="#contact">Contact</a><a class="tb-dl" href="Joshua_Anilao_Resume.pdf?v=1793785808" download="Joshua_Anilao_Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Resume</a>
 </div>
 
 <div class="shell">
@@ -433,7 +434,7 @@ footer{font-size:13px;color:var(--muted);text-align:center;padding-top:6px}
       <a href="#contact"><svg class="ni" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>Contact</a>
     </nav>
     <div class="rail-dl">
-      <a class="dl-tile" href="Joshua_Anilao_Resume.pdf?v=1793783440" download="Joshua_Anilao_Resume.pdf" aria-label="Download my resume (PDF)">
+      <a class="dl-tile" href="Joshua_Anilao_Resume.pdf?v=1793785808" download="Joshua_Anilao_Resume.pdf" aria-label="Download my resume (PDF)">
         <span class="dl-label">Download RESUME</span>
         <span class="dl-frame"><svg class="dl-doc" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 6h24l12 12v38a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#fff" stroke="#2f9be0" stroke-width="3" stroke-linejoin="round"/><path d="M40 6v12h12" fill="#e3f1fb" stroke="#2f9be0" stroke-width="3" stroke-linejoin="round"/><circle cx="25" cy="22" r="5" fill="#2f9be0"/><path d="M18 33c1-4.5 3.8-6.5 7-6.5s6 2 7 6.5" fill="#2f9be0"/><path d="M36 22h9M36 28h7M20 40h25M20 46h25M20 52h17" stroke="#9fb3c8" stroke-width="3" stroke-linecap="round"/></svg></span>
         <span class="dl-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Resume PDF</span>
@@ -563,7 +564,7 @@ footer{font-size:13px;color:var(--muted);text-align:center;padding-top:6px}
       <div><h2>Let's talk games</h2><p>If you're building games, exploring new ideas or turning concepts into playable products, I'd be glad to connect.</p></div>
       <div class="contact-btns">
         <a class="cta" href="https://www.linkedin.com/in/joshua-anilao/" target="_blank" rel="noopener">Message me on LinkedIn</a>
-        <a class="cta ghost" href="Joshua_Anilao_Resume.pdf?v=1793783440" download="Joshua_Anilao_Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Download resume</a>
+        <a class="cta ghost" href="Joshua_Anilao_Resume.pdf?v=1793785808" download="Joshua_Anilao_Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Download resume</a>
       </div>
     </section>
 
@@ -717,7 +718,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",
   const big=/Mega|Jackpot/.test(WORDS[i]);el.style.left=x+"px";el.style.top=y+"px";el.style.fontSize=(big?36:30)+"px";el.style.setProperty("--r",((Math.random()-.5)*14).toFixed(1)+"deg");
   document.body.appendChild(el);el.addEventListener("animationend",()=>el.remove());}
  const stage=document.querySelector(".stage");
- if(stage)stage.addEventListener("pointerdown",e=>{if(e.target.closest("a,button"))return;spawn(e.clientX,e.clientY,18,5.2);pop(e.clientX,e.clientY)},{passive:true});
+ if(stage){let down=null;
+  stage.addEventListener("pointerdown",e=>{down=e.target.closest("a,button")?null:{id:e.pointerId,x:e.clientX,y:e.clientY,t:Date.now()}},{passive:true});
+  stage.addEventListener("pointercancel",()=>{down=null},{passive:true});
+  addEventListener("scroll",()=>{down=null},{passive:true});
+  stage.addEventListener("pointerup",e=>{const d=down;down=null;if(!d||d.id!==e.pointerId)return;
+   if(Math.hypot(e.clientX-d.x,e.clientY-d.y)>12||Date.now()-d.t>700)return;spawn(e.clientX,e.clientY,18,5.2);pop(e.clientX,e.clientY)},{passive:true});}
 
 })();
 </script>
